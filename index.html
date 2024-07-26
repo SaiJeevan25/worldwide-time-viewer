@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Zone</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="icon" type="image/jpg" href="images/clock.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header-container">
+      <div class="title">
+        <span>WorldWide</span>
+        <span>Time</span>
+        <span>Viewer</span>
+      </div>
+      <p class="caption">Real-Time Local Time for Any Location</p>
+    </div>
+    <div class="timezone-info">
+      <p class="region-display"></p>
+      <div class="time-date-container">
+        <p class="time-display"></p>
+        <p class="date-display"></p>
+      </div>
+    </div>
+    <div class="random-regions"></div>
+    <div class="select-container">
+      <div class="region-container">
+        <p>Select Region</p>
+        <select id="region">
+          <option value="" disabled selected>Select Region</option>
+          <option value="Africa">Africa</option>
+          <option value="America">America</option>
+          <option value="Antarctica">Antarctica</option>
+          <option value="Asia">Asia</option>
+          <option value="Atlantic">Atlantic</option>
+          <option value="Australia">Australia</option>
+          <option value="Europe">Europe</option>
+          <option value="Indian">Indian</option>
+          <option value="Pacific">Pacific</option>
+          <option value="Etc">ETC</option>
+        </select>
+      </div>
+      <div class="time-zone-container">
+        <p>Select Time Zone</p>
+        <select id="time-zone"></select>
+      </div>
+    </div>
+    <div>
+      <button id="timeAtLoc">Get Time For Your Location</button>
+    </div>
+    <script src="script.js" type="module"></script>
+  </body>
+</html>

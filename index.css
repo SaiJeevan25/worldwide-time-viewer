@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Montserrat,'Segoe UI', Tahoma, sans-serif;
+}
+
+.header-container{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 5px solid #881616
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  background: #881616;
+  padding: 10px 8px;
+  font-family: Arsenal SC, 'Segoe UI' 
+}
+
+.title span{
+  font-size: 51.2px;
+  font-weight: 800;
+  color: white;
+}
+
+.title span:not(:last-child) {
+  margin-right: 10px;
+}
+
+.caption {
+  font-size: 23px;
+  margin-left: 10px;
+}
+
+.timezone-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.region-display {
+  font-size: 24px;
+  margin-left: 5px;
+}
+
+.region-display span{
+  font-weight: 600;
+}
+
+.time-date-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.time-display{
+  position: relative;
+  font-family: Montserrat, Arsenal SC, 'Segoe UI';
+  text-align:center;
+  font-size: 180px;
+  font-weight: 800;
+  background-image: transparent;
+  color: #212121;
+}
+
+.date-display {
+  font-size: 32px;
+}
+
+.random-regions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-left: 10px;
+  margin-right: 15px;
+  margin-bottom: 30px;
+}
+
+.region-box {
+  box-shadow: 0px 0px 5px 0px #000;
+   background:#D5D5D5;
+  padding: 8px 25px;
+  font-size: 1.3rem;
+  border-radius: 5px; 
+}
+
+.random-timeZone {
+  text-align: right;
+  font-family: Montserrat, Arsenal SC, 'Segoe UI';
+  font-weight: 800;
+}
+
+.random-time {
+  text-align: right;
+  margin-top: 3px;  
+}
+
+.select-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  border-top: 2px solid;
+  margin-bottom: 2rem;
+}
+
+.region-container {
+  padding: 20px;
+}
+
+.time-zone-container{
+  display: none;
+}
+
+.js-time-zone-container{
+  display: initial; 
+}
+
+.region-container p, .time-zone-container p{
+  font-size: 1.6rem;
+  text-align: center;
+  margin: 10px auto;
+}
+
+#region, #time-zone{
+  padding: 5px 40px 5px 5px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: none; 
+  box-shadow: 0px 0px 4px 0px #000;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 30px auto;
+  background: #881616;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 0px #000;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+  background-color: #a81919;
+}
+
+button:active {
+  transform: scale(0.96);
+  box-shadow: 0px 0px 5px 0px #555;
+}
+
+@media screen and (max-width: 750px) {
+  .header-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .title {
+    justify-content: center;
+  }
+
+  .caption{
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .time-display{
+    font-size: 150px;
+  }
+}
+
+@media screen and (max-width: 725px) {
+  .time-display{
+    font-size: 130px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .title span {
+    font-size: 45px;
+  }
+
+  .caption{
+    font-size: 20px;
+  }
+
+  .region-display{
+    font-size: 18px;
+  }
+
+  .time-display{
+    font-size: 110px;
+  }
+
+  .date-display {
+    font-size: 20px;
+  }
+
+  .region-box {
+    padding: 4px 18px;
+    font-size: 1.1rem;
+  }
+
+  .select-container{
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .region-container p , .time-zone-container p {
+    font-size: 1.3rem;
+  }
+
+  button {
+    padding: 12px 16px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .caption{
+    font-size: 16px;
+  }
+
+  .title span {
+    font-size: 40px;
+  }
+
+  .region-display{
+    font-size: 17px;
+  }
+
+  .time-display{
+    font-size: 98px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .title span {
+    font-size: 35px;
+  }
+
+  .time-display{
+    font-size: 79px;
+  }
+
+  #region , #time-zone {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .title span {
+    font-size: 30px;
+  }
+
+  .region-display{
+    font-size: 15px;
+  }
+
+  .time-display{
+    font-size: 68px;
+  }
+
+  .region-box {
+    padding: 4px 15px;
+    font-size: 1rem;
+    margin-left: 0px;
+  }
+}
